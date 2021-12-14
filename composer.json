@@ -1,0 +1,16 @@
+{
+    "name": "haruaki07/company_profile",
+    "type": "project",
+    "authors": [
+        {
+            "name": "haruaki07",
+            "email": "misbahulk2236@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Haruaki07\\CompanyProfile\\" : "app"
+        }
+    }
+}
