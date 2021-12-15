@@ -2,20 +2,32 @@
 
 namespace Haruaki07\CompanyProfile\Controller;
 
+use Haruaki07\CompanyProfile\Exception\ValidationException;
+use Haruaki07\CompanyProfile\Model\NumberRequest;
+use Haruaki07\CompanyProfile\Traits\WithResponse;
+
 class HomeController
 {
+	use WithResponse;
+
 	public function index()
 	{
-		echo '<a href="/about">about page</a>';
+		return $this->response('<a href="/about">about page</a>');
 	}
 
 	public function about()
 	{
-		echo 'about';
+		$this->response('This is about page');
 	}
 
-	public function number(int $num)
+	public function number($number)
 	{
-		echo "Number: $num";
+		try {
+			$request = new NumberRequest($number);
+		} catch (ValidationException $e) {
+			return $this->json($e->toArray(), 400);
+		}
+
+		$this->json(["message" => "your number is {$request->number}"]);
 	}
 }

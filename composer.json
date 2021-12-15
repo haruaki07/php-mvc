@@ -7,10 +7,13 @@
             "email": "misbahulk2236@gmail.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
             "Haruaki07\\CompanyProfile\\" : "app"
-        }
+        },
+        "files": ["app/helpers.php"]
+    },
+    "require": {
+        "rakit/validation": "^1.4"
     }
 }
