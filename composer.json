@@ -14,6 +14,8 @@
         "files": ["app/helpers.php"]
     },
     "require": {
-        "rakit/validation": "^1.4"
+        "rakit/validation": "^1.4",
+        "vlucas/phpdotenv": "^5.4",
+        "adbario/php-dot-notation": "^2.2"
     }
 }

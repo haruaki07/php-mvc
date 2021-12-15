@@ -2,8 +2,11 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use App\Core\Router;
+// Setup .env file
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . DIRECTORY_SEPARATOR . "..");
+$dotenv->safeLoad();
 
+use App\Core\Router;
 
 $router = new Router;
 
