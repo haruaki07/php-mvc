@@ -2,7 +2,7 @@
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use Haruaki07\CompanyProfile\Core\Router;
+use App\Core\Router;
 
 
 $router = new Router;

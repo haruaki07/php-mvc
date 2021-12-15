@@ -1,10 +1,10 @@
 <?php
 
-namespace Haruaki07\CompanyProfile\Controller;
+namespace App\Controller;
 
-use Haruaki07\CompanyProfile\Exception\ValidationException;
-use Haruaki07\CompanyProfile\Model\NumberRequest;
-use Haruaki07\CompanyProfile\Traits\WithResponse;
+use App\Exception\ValidationException;
+use App\Model\NumberRequest;
+use App\Traits\WithResponse;
 
 class HomeController
 {

@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Haruaki07\\CompanyProfile\\" : "app"
+            "App\\" : "app"
         },
         "files": ["app/helpers.php"]
     },

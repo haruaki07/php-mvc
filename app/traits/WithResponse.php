@@ -1,6 +1,6 @@
 <?php
 
-namespace Haruaki07\CompanyProfile\Traits;
+namespace App\Traits;
 
 trait WithResponse
 {

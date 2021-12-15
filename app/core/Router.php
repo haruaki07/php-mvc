@@ -1,6 +1,6 @@
 <?php
 
-namespace Haruaki07\CompanyProfile\Core;
+namespace App\Core;
 
 use \Error;
 

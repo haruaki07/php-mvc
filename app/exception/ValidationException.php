@@ -1,6 +1,6 @@
 <?php
 
-namespace Haruaki07\CompanyProfile\Exception;
+namespace App\Exception;
 
 class ValidationException extends \Exception
 {

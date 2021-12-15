@@ -1,8 +1,8 @@
 <?php
 
-namespace Haruaki07\CompanyProfile\Model;
+namespace App\Model;
 
-use Haruaki07\CompanyProfile\Exception\ValidationException;
+use App\Exception\ValidationException;
 use Rakit\Validation\Validator;
 
 class NumberRequest
