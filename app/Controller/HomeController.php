@@ -4,15 +4,32 @@ namespace App\Controller;
 
 use App\Exception\ValidationException;
 use App\Model\NumberRequest;
+use App\Service\EmployeeService;
 use App\Traits\WithResponse;
 
 class HomeController
 {
 	use WithResponse;
 
+	protected EmployeeService $employeeService;
+
+	function __construct()
+	{
+		$this->employeeService = new EmployeeService();
+	}
+
 	public function index()
 	{
-		return $this->response('<a href="/about">about page</a>');
+		$employees = $this->employeeService->getAll();
+		$json = json_encode($employees, JSON_PRETTY_PRINT);
+
+		return $this->response(
+			<<<END
+				<a href="/about">about page</a>
+				<h4>Employee List</h4>
+				<pre>{$json}</pre>
+			END
+		);
 	}
 
 	public function about()
